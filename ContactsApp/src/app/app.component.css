@@ -1,0 +1,37 @@
+/* General Component Styles (component.css) */
+
+/* Ensure all mat-form-field elements are consistent across components */
+mat-form-field {
+  display: block;
+  width: 100%;
+}
+
+  mat-form-field input {
+    background-color: #f0f0f0; /* Light gray background for components */
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+button {
+  background-color: #0288d1;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  width: auto;
+}
+
+  button:hover {
+    background-color: #0277bd;
+  }
+
+/* General form container styling */
+.component-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+

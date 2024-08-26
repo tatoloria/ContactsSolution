@@ -1,0 +1,39 @@
+.contacts-list-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-header-cell, mat-cell {
+  padding: 10px;
+}
+
+mat-header-cell {
+  font-weight: bold;
+  color: #0288d1;
+}
+
+mat-cell {
+  font-size: 14px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+  button[mat-icon-button] {
+    margin-left: 5px;
+  }
+
+  button[mat-raised-button] {
+    width: 100%;
+    margin-top: 20px;
+  }

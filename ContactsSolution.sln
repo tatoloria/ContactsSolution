@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsApi", "ContactsApi\ContactsApi.csproj", "{620A0AF5-2932-46E6-A20C-882CB293C3DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContactsApp", "ContactsApp", "{7147455F-1406-4BCA-92C0-42EB02A557CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A19FE69-BD6F-4075-9EAB-9B916450F881}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\index.html = ContactsApp\src\index.html
+		ContactsApp\src\main.ts = ContactsApp\src\main.ts
+		ContactsApp\src\styles.css = ContactsApp\src\styles.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{CF94EDAA-0A8C-4700-8485-FC6BBE08A264}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\services\auth.service.spec.ts = ContactsApp\src\services\auth.service.spec.ts
+		ContactsApp\src\services\auth.service.ts = ContactsApp\src\services\auth.service.ts
+		ContactsApp\src\services\contacts.service.spec.ts = ContactsApp\src\services\contacts.service.spec.ts
+		ContactsApp\src\services\contacts.service.ts = ContactsApp\src\services\contacts.service.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{19175747-BFEB-41A5-A433-2179CEFF94EF}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\app-routing.module.ts = ContactsApp\src\app\app-routing.module.ts
+		ContactsApp\src\app\app.component.css = ContactsApp\src\app\app.component.css
+		ContactsApp\src\app\app.component.html = ContactsApp\src\app\app.component.html
+		ContactsApp\src\app\app.component.spec.ts = ContactsApp\src\app\app.component.spec.ts
+		ContactsApp\src\app\app.component.ts = ContactsApp\src\app\app.component.ts
+		ContactsApp\src\app\app.config.ts = ContactsApp\src\app\app.config.ts
+		ContactsApp\src\app\app.module.ts = ContactsApp\src\app\app.module.ts
+		ContactsApp\src\app\app.routes.ts = ContactsApp\src\app\app.routes.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contacts-list", "contacts-list", "{D1ABBEEA-5E15-4441-AE09-1094BD1B840A}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\contacts-list\contacts-list.component.css = ContactsApp\src\app\contacts-list\contacts-list.component.css
+		ContactsApp\src\app\contacts-list\contacts-list.component.html = ContactsApp\src\app\contacts-list\contacts-list.component.html
+		ContactsApp\src\app\contacts-list\contacts-list.component.spec.ts = ContactsApp\src\app\contacts-list\contacts-list.component.spec.ts
+		ContactsApp\src\app\contacts-list\contacts-list.component.ts = ContactsApp\src\app\contacts-list\contacts-list.component.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contact-detail", "contact-detail", "{C3D5B352-3B17-4BE2-8336-52F0A40FFF56}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\contact-detail\contact-detail.component.css = ContactsApp\src\app\contact-detail\contact-detail.component.css
+		ContactsApp\src\app\contact-detail\contact-detail.component.html = ContactsApp\src\app\contact-detail\contact-detail.component.html
+		ContactsApp\src\app\contact-detail\contact-detail.component.spec.ts = ContactsApp\src\app\contact-detail\contact-detail.component.spec.ts
+		ContactsApp\src\app\contact-detail\contact-detail.component.ts = ContactsApp\src\app\contact-detail\contact-detail.component.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contact-form", "contact-form", "{C6393F22-38DD-4327-A50E-E7F4499D8397}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\contact-form\contact-form.component.css = ContactsApp\src\app\contact-form\contact-form.component.css
+		ContactsApp\src\app\contact-form\contact-form.component.html = ContactsApp\src\app\contact-form\contact-form.component.html
+		ContactsApp\src\app\contact-form\contact-form.component.spec.ts = ContactsApp\src\app\contact-form\contact-form.component.spec.ts
+		ContactsApp\src\app\contact-form\contact-form.component.ts = ContactsApp\src\app\contact-form\contact-form.component.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "login", "login", "{99EECE38-F895-4421-BCA2-7AE9DC389F66}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\login\login.component.css = ContactsApp\src\app\login\login.component.css
+		ContactsApp\src\app\login\login.component.html = ContactsApp\src\app\login\login.component.html
+		ContactsApp\src\app\login\login.component.spec.ts = ContactsApp\src\app\login\login.component.spec.ts
+		ContactsApp\src\app\login\login.component.ts = ContactsApp\src\app\login\login.component.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "register", "register", "{C06FEE01-DB88-4A51-A04E-D336C2B64C2B}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\register\register.component.css = ContactsApp\src\app\register\register.component.css
+		ContactsApp\src\app\register\register.component.html = ContactsApp\src\app\register\register.component.html
+		ContactsApp\src\app\register\register.component.spec.ts = ContactsApp\src\app\register\register.component.spec.ts
+		ContactsApp\src\app\register\register.component.ts = ContactsApp\src\app\register\register.component.ts
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{620A0AF5-2932-46E6-A20C-882CB293C3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620A0AF5-2932-46E6-A20C-882CB293C3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620A0AF5-2932-46E6-A20C-882CB293C3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620A0AF5-2932-46E6-A20C-882CB293C3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A19FE69-BD6F-4075-9EAB-9B916450F881} = {7147455F-1406-4BCA-92C0-42EB02A557CD}
+		{CF94EDAA-0A8C-4700-8485-FC6BBE08A264} = {5A19FE69-BD6F-4075-9EAB-9B916450F881}
+		{19175747-BFEB-41A5-A433-2179CEFF94EF} = {5A19FE69-BD6F-4075-9EAB-9B916450F881}
+		{D1ABBEEA-5E15-4441-AE09-1094BD1B840A} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+		{C3D5B352-3B17-4BE2-8336-52F0A40FFF56} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+		{C6393F22-38DD-4327-A50E-E7F4499D8397} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+		{99EECE38-F895-4421-BCA2-7AE9DC389F66} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+		{C06FEE01-DB88-4A51-A04E-D336C2B64C2B} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {052BC5C3-BDE1-4366-ADE8-600FF4E0D89F}
+	EndGlobalSection
+EndGlobal

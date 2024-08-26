@@ -1,0 +1,97 @@
+/* Global Styles (styles.css) */
+
+/* General body styling */
+body {
+  background-color: #f1f3f4;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* General input field styling */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px; /* Adds spacing between form fields */
+}
+
+  mat-form-field input {
+    background-color: #ffffff; /* Default input background */
+    color: #000;
+    padding: 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+/* Autofill override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000 !important;
+  background-color: #ffffff !important;
+}
+
+/* Placeholder text styling */
+::placeholder {
+  color: #757575;
+  padding-left: 5px; /* Padding for better placeholder text positioning */
+}
+
+:-ms-input-placeholder {
+  color: #757575;
+  padding-left: 5px; /* Padding for better placeholder text positioning */
+}
+
+::-ms-input-placeholder {
+  color: #757575;
+  padding-left: 5px; /* Padding for better placeholder text positioning */
+}
+
+/* Global button styling */
+button {
+  margin-top: 20px;
+  padding: 12px 0;
+  font-size: 18px;
+  border-radius: 24px;
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+  button:hover {
+    background-color: #1565c0;
+  }
+
+/* Title styling */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1976d2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+}
+
+/* Tab link styling */
+.mat-tab-link {
+  color: #1976d2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+  .mat-tab-link.active {
+    color: #0d47a1;
+  }
+
+/* Adjust the margin to 10px when the field is invalid */
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-floating-label {
+  margin: 10px !important;
+}
+
+/* Adjust the margin to 10px for the specified label state */
+.mdc-floating-label.mat-mdc-floating-label[ng-reflect-floating="false"] {
+  margin: 20px !important;
+}

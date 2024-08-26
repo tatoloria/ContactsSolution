@@ -1,0 +1,28 @@
+<div class="register-form-container">
+  <h1>Register</h1>
+  <!-- Error message placeholder -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <form (ngSubmit)="onRegister()">
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" [(ngModel)]="username" name="username" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="email" name="email" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [(ngModel)]="password" name="password" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Register</button>
+  </form>
+  <div class="login-link">
+    <a routerLink="/login">Already have an account? Go to Login</a>
+  </div>
+</div>
