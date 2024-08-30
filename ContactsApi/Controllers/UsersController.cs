@@ -73,8 +73,9 @@ namespace ContactsApi.Controllers
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-            new Claim(ClaimTypes.Name, user.Username)
-        }),
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()) // Include userId as a claim
+                }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                 Issuer = _configuration["Jwt:Issuer"],
@@ -83,8 +84,9 @@ namespace ContactsApi.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // Return the JWT token
-            return Ok(new { Token = tokenString });
+            // Return the JWT token and userId
+            return Ok(new { Token = tokenString, UserId = user.Id });
         }
+
     }
 }

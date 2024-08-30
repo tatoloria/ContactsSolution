@@ -35,3 +35,21 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Center welcome message and logout button */
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.welcome-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+  .welcome-message button {
+    margin: 20px; /* Adds space between the welcome text and the logout button */
+  }

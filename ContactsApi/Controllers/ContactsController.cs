@@ -20,10 +20,20 @@ namespace ContactsApi.Controllers
 
         // GET: api/Contacts
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Contact>>> GetContacts()
+        public async Task<ActionResult<IEnumerable<Contact>>> GetContacts(string search = null)
         {
-            // Return all contacts
-            return await _context.Contacts.ToListAsync();
+            var query = _context.Contacts.AsQueryable();
+
+            // If a search term is provided, filter the contacts
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(c => c.Name.Contains(search));
+            }
+
+            // Order the contacts by name
+            var contacts = await query.OrderBy(c => c.Name).ToListAsync();
+
+            return Ok(contacts);
         }
 
         // GET: api/Contacts/{id}
@@ -45,6 +55,9 @@ namespace ContactsApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Contact>> PostContact(Contact contact)
         {
+            // Generate new Guid
+            contact.Id = Guid.NewGuid();
+
             // Add the new contact
             _context.Contacts.Add(contact);
             await _context.SaveChangesAsync();

@@ -74,6 +74,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "register", "register", "{C0
 		ContactsApp\src\app\register\register.component.ts = ContactsApp\src\app\register\register.component.ts
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{D8BE40ED-C1F3-4678-9B77-893B414E311C}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\models\contact.model.ts = ContactsApp\src\app\models\contact.model.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{33096294-C9A8-4111-AC9D-2AB73FF91A55}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsApp\src\app\auth\auth.guard.ts = ContactsApp\src\app\auth\auth.guard.ts
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +107,8 @@ Global
 		{C6393F22-38DD-4327-A50E-E7F4499D8397} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
 		{99EECE38-F895-4421-BCA2-7AE9DC389F66} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
 		{C06FEE01-DB88-4A51-A04E-D336C2B64C2B} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+		{D8BE40ED-C1F3-4678-9B77-893B414E311C} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
+		{33096294-C9A8-4111-AC9D-2AB73FF91A55} = {19175747-BFEB-41A5-A433-2179CEFF94EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {052BC5C3-BDE1-4366-ADE8-600FF4E0D89F}

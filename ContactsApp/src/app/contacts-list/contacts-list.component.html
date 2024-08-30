@@ -1,6 +1,11 @@
 <div class="contacts-list-container">
   <h1>Contact List</h1>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Search contacts</mat-label>
+    <input matInput [(ngModel)]="searchQuery" (input)="onSearch()" placeholder="Search contacts..." />
+  </mat-form-field>
+
   <mat-table [dataSource]="contacts" class="mat-elevation-z8">
     <!-- Name Column -->
     <ng-container matColumnDef="name">

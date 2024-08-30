@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://localhost:7177/api/Users';  // Replace with your actual API URL
-  private userIdKey = 'userId';
-  private tokenKey = 'authToken';
+  private apiUrl = 'http://localhost:5103/api/Users';
 
-  constructor(private http: HttpClient) { }
+  private usernameSubject: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
 
-  // Method for user login
-  login(username: string, password: string): Observable<{ token: string, userId: string }> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const body = JSON.stringify({ username, password });
-    return this.http.post<{ token: string, userId: string }>(`${this.apiUrl}/login`, body, { headers });
+  constructor(private http: HttpClient) {
+
+    // Initialize with the stored username if available
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+      this.usernameSubject.next(storedUsername);
+    }
   }
 
   // Method for user registration
@@ -25,35 +25,55 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}/register`, user, { headers, responseType: 'text' });
   }
 
-  // Method to log out the user
-  logout(): void {
-    localStorage.removeItem(this.tokenKey);
-    localStorage.removeItem(this.userIdKey);
-  }
+  // Method to handle user login
+  login(username: string, password: string): Observable<{ token: string, userId: string }> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const body = JSON.stringify({ username, password });
+    return this.http.post<{ token: string, userId: string }>(`${this.apiUrl}/login`, body, { headers });
+  }  
 
-  // Method to retrieve the stored token
-  getToken(): string | null {
-    return localStorage.getItem(this.tokenKey);
-  }
-
-  // Method to store the token
+  // Method to save the JWT token
   setToken(token: string): void {
-    localStorage.setItem(this.tokenKey, token);
+    localStorage.setItem('authToken', token);
   }
 
-  // Method to store the userId
-  setUserId(userId: string): void {
-    localStorage.setItem(this.userIdKey, userId);
+  // Method to retrieve the JWT token
+  getToken(): string | null {
+    return localStorage.getItem('authToken');
   }
 
-  // Method to retrieve the stored userId
-  getUserId(): string | null {
-    return localStorage.getItem(this.userIdKey);
-  }
-
-  // Method to check if the user is authenticated
+  // Method to check if is Authenticated
   isAuthenticated(): boolean {
     const token = this.getToken();
-    return !!token;
+    return !!token; // Return true if there's a token, false otherwise
+  }
+
+  // Method to save the username
+  setUsername(username: string): void {
+    this.usernameSubject.next(username);
+    localStorage.setItem('username', username);
+  }
+
+  // Method to get the username as an observable
+  getUsername(): Observable<string | null> {
+    return this.usernameSubject.asObservable();
+  }
+
+  // Method to save the userId
+  setUserId(userId: string): void {
+    localStorage.setItem('userId', userId);
+  }
+
+  // Method to retrieve the userId
+  getUserId(): string | null {
+    return localStorage.getItem('userId');
+  }
+
+  // Method to handle user logout
+  logout(): void {
+    this.usernameSubject.next(null);
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('username');
+    localStorage.removeItem('userId');
   }
 }

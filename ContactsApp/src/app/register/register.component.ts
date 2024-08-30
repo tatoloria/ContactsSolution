@@ -27,7 +27,7 @@ export class RegisterComponent {
     const user = {
       username: this.username,
       email: this.email,
-      password: this.password
+      passwordHash: this.password
     };
 
     this.authService.register(user).subscribe({
